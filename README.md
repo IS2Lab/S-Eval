@@ -15,7 +15,8 @@
 </div>
 
 <h2 id="S-Eval">🔔 Updates</h2>
-📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>. You can also download the benchmark from the Huggingface 📁 <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">Dataset</a>.
+📣 [2024/05/31]: We release 20,000 corresponding <a href="./s_eval/s-eval_attack_zh_v0.1.0.jsonl.zip">attack prompts</a>.
+📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>. You can also download the benchmark from the HuggingFace 📁 <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">Dataset</a>.
 
 <br>
 <br>
