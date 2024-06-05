@@ -60,7 +60,7 @@ jobs:
             -H "Content-Type: application/json" \
             -d @post_clone.json https://api.github.com/gists/${{ steps.set_id.outputs.GIST }} > /dev/null 2>&1
 
-      - name: Push
-        uses: ad-m/github-push-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Push
+      #   uses: ad-m/github-push-action@main
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
