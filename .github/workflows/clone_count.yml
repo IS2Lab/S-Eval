@@ -60,29 +60,47 @@ jobs:
             -H "Content-Type: application/json" \
             -d @post_clone.json https://api.github.com/gists/${{ steps.set_id.outputs.GIST }} > /dev/null 2>&1
 
-          # if [ ! -f CLONE.md ]; then
-          #   shields="https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url="
-          #   url="https://gist.githubusercontent.com/${{ github.actor }}/${{ steps.set_id.outputs.GIST }}/raw/clone.json"
-          #   repo="https://github.com/MShawon/github-clone-count-badge"
-          #   echo ''> CLONE.md
-          #   echo '
-          #   **Markdown**
-
-          #   ```markdown' >> CLONE.md
-          #   echo "[![GitHub Clones]($shields$url&logo=github)]($repo)" >> CLONE.md
-          #   echo '
-          #   ```
-
-          #   **HTML**
-          #   ```html' >> CLONE.md
-          #   echo "<a href='$repo'><img alt='GitHub Clones' src='$shields$url&logo=github'></a>" >> CLONE.md
-          #   echo '```' >> CLONE.md
-            
-          #   git add CLONE.md
-          #   git config --global user.name "GitHub Action"
-          #   git config --global user.email "action@github.com"
-          #   git commit -m "create clone count badge"
-          # fi
+      - name: parse latest traffic count
+        run: |
+          curl --user "${{ github.actor }}:${{ secrets.SECRET_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/traffic/views \
+            > traffic.json
+      - name: create gist and download previous count
+        id: set_id
+        run: |
+          if gh secret list | grep -q "TRAFFIC_ID"
+          then
+              echo "TRAFFIC_ID found"
+              echo ::set-output name=GIST::${{ secrets.TRAFFIC_ID }}
+              curl https://gist.githubusercontent.com/${{ github.actor }}/${{ secrets.TRAFFIC_ID }}/raw/traffic.json > traffic_before.json
+              if cat traffic_before.json | grep '404: Not Found'; then
+                echo "TRAFFIC_ID not valid anymore. Creating another gist..."
+                traffic_id=$(gh gist create traffic.json | awk -F / '{print $NF}')
+                echo $traffic_id | gh secret set TRAFFIC_ID
+                echo ::set-output name=GIST::$traffic_id
+                cp traffic.json traffic_before.json
+                git rm --ignore-unmatch TRAFFIC.md
+              fi
+          else
+              echo "TRAFFIC_ID not found. Creating a gist..."
+              traffic_id=$(gh gist create traffic.json | awk -F / '{print $NF}')
+              echo $traffic_id | gh secret set TRAFFIC_ID
+              echo ::set-output name=GIST::$traffic_id
+              cp traffic.json traffic_before.json
+          fi
+      - name: update traffic.json
+        run: |
+          curl https://gist.github.com/IS2Lab/c0e98af9a3312be367faf6283719142e/raw/traffic.py > traffic.py
+          python3 traffic.py
+      - name: Update gist with latest count
+        run: |
+          content=$(sed -e 's/\\/\\\\/g' -e 's/\t/\\t/g' -e 's/\"/\\"/g' -e 's/\r//g' "traffic.json" | sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g')
+          echo '{"description": "${{ github.repository }} traffic statistics", "files": {"traffic.json": {"content": "'"$content"'"}}}' > post_traffic.json
+          curl -s -X PATCH \
+            --user "${{ github.actor }}:${{ secrets.SECRET_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d @post_traffic.json https://api.github.com/gists/${{ steps.set_id.outputs.GIST }} > /dev/null 2>&1
 
       - name: Push
         uses: ad-m/github-push-action@main
