@@ -80,4 +80,4 @@ jobs:
       - name: Push
         uses: ad-m/github-push-action@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.SECRET_TOKEN }}
