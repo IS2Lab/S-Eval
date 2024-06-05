@@ -77,7 +77,7 @@ jobs:
       #       git config --global user.email "action@github.com"
       #       git commit -m "create traffic count badge"
       #     fi
-      # - name: Push
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push
+        uses: ad-m/github-push-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
