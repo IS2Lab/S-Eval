@@ -48,7 +48,7 @@ jobs:
 
       - name: update clone.json
         run: |
-          curl https://gist.github.com/zggg1p/2f387e828f9e78b0dd33d799ad3ec78f/raw/clone_count.py > clone_count.py
+          curl https://gist.github.com/IS2Lab/a104653dde6c90b8f2237f20499fada3/raw/clone_count.py > clone_count.py
           python3 clone_count.py
 
       - name: Update gist with latest count
@@ -84,7 +84,7 @@ jobs:
           #   git commit -m "create clone count badge"
           # fi
 
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Push
+      #   uses: ad-m/github-push-action@main
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
