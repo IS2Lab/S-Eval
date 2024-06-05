@@ -9,6 +9,7 @@
   <h4>
     <img src="https://img.shields.io/badge/Version-0.1.0-blue.svg" alt="Version">
     <a href="https://arxiv.org/abs/2405.14191"> <img src="https://img.shields.io/badge/ArXiv-Paper-red" alt="Paper"></a> 
+    <a href='https://github.comIS2Lab/S-Eval'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.github.com/IS2Lab/a6ee584667b0599d2d1b324eac9f00dc/raw/clone.json&logo=github'></a>
     <img src="https://img.shields.io/github/stars/IS2Lab/S-Eval" alt="Stars">
   </h4>
 
