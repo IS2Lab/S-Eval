@@ -20,7 +20,7 @@
 📣 [2024/05/31]: We release 20,000 corresponding <a href="./s_eval/s-eval_attack_zh_v0.1.0.jsonl.zip">attack prompts</a>.
 <br>
 <br>
-📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>. You can also download the benchmark from the <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">HuggingFace Dataset</a> or the <a href="https://modelscope.cn/datasets/yuanxiaohan/S-Eval/files">ModelScope Dataset</a>.
+📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>. You can also download the benchmark from the <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">HuggingFace Dataset</a>.
 <br>
 <br>
 <b><i>To maintain this benchmark for satisfying evolving needs from addressing future evaluation challenges, we warmly welcome submissions of new risks and attacks to continuously augment our risk taxonomy and adversarial scenarios through this project!</i></b>
@@ -307,4 +307,4 @@ If our work is useful for your own, please cite us with the following BibTex ent
 S-Eval may contain offensive or upsetting content, is intended for legitimate academic research only, and is strictly prohibited for use in any commercial endeavor or for any other illegal purpose. The views expressed in the benchmark are not related to the organizations, authors and affiliated entities involved in this project. All consequences arising from the use of this benchmaek are the sole responsibility of the user. This benchmark may not be modified, distributed or otherwise misused without express permission. If you have any questions, please contact <a href="mailto:xiaohanyuan@zju.edu.cn">xiaohanyuan@zju.edu.cn</a>.
 
 <h2 id="S-Eval">🪪 License</h2>
-S-Eval benchmark is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, the text of which can be found in the LICENSE file.
+S-Eval benchmark is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, the text of which can be found in the LICENSE file.
