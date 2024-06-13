@@ -57,7 +57,7 @@ jobs:
           # curl https://gist.github.com/IS2Lab/c0e98af9a3312be367faf6283719142e/raw/traffic.py > traffic.py
           echo "import json
 
-          with open('traffic.json', 'r') as fh:
+          with open('traffic_now.json', 'r') as fh:
               now = json.load(fh)
           
           with open('traffic_before.json', 'r') as fh:
@@ -89,7 +89,7 @@ jobs:
               for item in remove_this:
                   views.remove(item)
           
-          with open('traffic.json', 'w', encoding='utf-8') as fh:
+          with open('traffic_latest.json', 'w', encoding='utf-8') as fh:
               json.dump(latest, fh, ensure_ascii=False, indent=4)" > traffic.py
           python3 traffic.py
       - name: Update gist with latest count
