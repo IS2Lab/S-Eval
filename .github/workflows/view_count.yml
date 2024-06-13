@@ -53,11 +53,12 @@ jobs:
           fi
       - name: update traffic.json
         run: |
+          cp traffic_before.json traffic_latest.json
           curl https://gist.github.com/IS2Lab/c0e98af9a3312be367faf6283719142e/raw/traffic.py > traffic.py
           python3 traffic.py
       - name: Update gist with latest count
         run: |
-          content=$(sed -e 's/\\/\\\\/g' -e 's/\t/\\t/g' -e 's/\"/\\"/g' -e 's/\r//g' "traffic_before.json" | sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g')
+          content=$(sed -e 's/\\/\\\\/g' -e 's/\t/\\t/g' -e 's/\"/\\"/g' -e 's/\r//g' "traffic_latest.json" | sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g')
           echo '{"description": "${{ github.repository }} traffic statistics", "files": {"traffic.json": {"content": "'"$content"'"}}}' > post_traffic.json
           curl -s -X PATCH \
             --user "${{ github.actor }}:${{ secrets.SECRET_TOKEN }}" \
