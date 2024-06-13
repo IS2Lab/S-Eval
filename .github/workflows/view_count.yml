@@ -38,7 +38,7 @@ jobs:
                 echo $traffic_id | gh secret set TRAFFIC_ID
                 echo ::set-output name=GIST::$traffic_id
                 cp traffic.json traffic_before.json
-                git rm --ignore-unmatch TRAFFIC.md
+                # git rm --ignore-unmatch TRAFFIC.md
               fi
           else
               echo "TRAFFIC_ID not found. Creating a gist..."
