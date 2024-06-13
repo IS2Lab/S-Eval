@@ -54,7 +54,43 @@ jobs:
       - name: update traffic.json
         run: |
           cp traffic_before.json traffic_latest.json
-          curl https://gist.github.com/IS2Lab/c0e98af9a3312be367faf6283719142e/raw/traffic.py > traffic.py
+          # curl https://gist.github.com/IS2Lab/c0e98af9a3312be367faf6283719142e/raw/traffic.py > traffic.py
+          echo "import json
+
+          with open('traffic.json', 'r') as fh:
+              now = json.load(fh)
+          
+          with open('traffic_before.json', 'r') as fh:
+              before = json.load(fh)
+          timestamps = {before['views'][i]['timestamp']: i for i in range(len(before['views']))}
+          
+          latest = dict(before)
+          for i in range(len(now['views'])):
+              timestamp = now['views'][i]['timestamp']
+              if timestamp in timestamps:
+                  latest['views'][timestamps[timestamp]] = now['views'][i]
+              else:
+                  latest['views'].append(now['views'][i])
+          
+          
+          latest['count'] = sum(map(lambda x: int(x['count']), latest['views']))
+          latest['uniques'] = sum(map(lambda x: int(x['uniques']), latest['views']))
+          
+          if len(timestamps) > 100:
+              remove_this = []
+              views = latest['views']
+              for i in range(len(timestamps) - 35):
+                  views[i]['timestamp'] = views[i]['timestamp'][:7] 
+                  if views[i]['timestamp'] == views[i+1]['timestamp'][:7]:
+                      views[i+1]['count'] +=  views[i]['count']
+                      views[i+1]['uniques'] +=  views[i]['uniques']
+                      remove_this.append(views[i])
+          
+              for item in remove_this:
+                  views.remove(item)
+          
+          with open('traffic.json', 'w', encoding='utf-8') as fh:
+              json.dump(latest, fh, ensure_ascii=False, indent=4)" > traffic.py
           python3 traffic.py
       - name: Update gist with latest count
         run: |
