@@ -42,6 +42,7 @@ jobs:
               fi
           else
               echo "TRAFFIC_ID not found. Creating a gist..."
+              cp traffic_now.json traffic.json
               traffic_id=$(gh gist create traffic.json | awk -F / '{print $NF}')
               echo $traffic_id | gh secret set TRAFFIC_ID
               echo ::set-output name=GIST::$traffic_id
