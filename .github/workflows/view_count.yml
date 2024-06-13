@@ -53,7 +53,7 @@ jobs:
           python3 traffic.py
       - name: Update gist with latest count
         run: |
-          content=$(sed -e 's/\\/\\\\/g' -e 's/\t/\\t/g' -e 's/\"/\\"/g' -e 's/\r//g' "traffic_latest.json" | sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g')
+          content=$(sed -e 's/\\/\\\\/g' -e 's/\t/\\t/g' -e 's/\"/\\"/g' -e 's/\r//g' "traffic_now.json" | sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g')
           echo '{"description": "${{ github.repository }} traffic statistics", "files": {"traffic.json": {"content": "'"$content"'"}}}' > post_traffic.json
           curl -s -X PATCH \
             --user "${{ github.actor }}:${{ secrets.SECRET_TOKEN }}" \
