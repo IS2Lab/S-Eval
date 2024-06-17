@@ -7,7 +7,7 @@
   </h3>
 
   <h4>
-    <img src="https://img.shields.io/badge/Version-0.1.0-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-0.1.1-blue.svg" alt="Version">
     <a href="https://arxiv.org/abs/2405.14191"> <img src="https://img.shields.io/badge/ArXiv-Paper-red" alt="Paper"></a> 
     <a href='https://github.comIS2Lab/S-Eval'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=yellow&label=View&query=count&url=https://gist.github.com/IS2Lab/068d37fedfd45784473495841fe9bf68/raw/traffic.json&logo=github'></a>
     <a href='https://github.comIS2Lab/S-Eval'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.github.com/IS2Lab/a6ee584667b0599d2d1b324eac9f00dc/raw/clone.json&logo=github'></a>
@@ -17,6 +17,9 @@
 </div>
 
 <h2 id="S-Eval">🔔 Updates</h2>
+📣 [2024/06/17]: We further release 5,000 base risk prompts and 50,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.1</a>). If you require automatic safety evaluations, please feel free to submit a request via <a href="https://github.com/IS2Lab/S-Eval/issues">Issues</a> or contact us by <a href="mailto:xiaohanyuan@zju.edu.cn">Email</a>.
+<br>
+<br>
 📣 [2024/05/31]: We release 20,000 corresponding <a href="./s_eval/s-eval_attack_zh_v0.1.0.jsonl.zip">attack prompts</a>.
 <br>
 <br>
