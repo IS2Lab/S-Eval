@@ -17,7 +17,7 @@
 </div>
 
 <h2 id="S-Eval">🔔 Updates</h2>
-📣 [2024/06/17]: We further release 5,000 base risk prompts and 50,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.1</a>). If you require automatic safety evaluations, please feel free to submit a request via <a href="https://github.com/IS2Lab/S-Eval/issues">Issues</a> or contact us by <a href="mailto:xiaohanyuan@zju.edu.cn">Email</a>.
+📣 [2024/06/17]: We further release 10,000 base risk prompts and 100,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.1</a>). If you require automatic safety evaluations, please feel free to submit a request via <a href="https://github.com/IS2Lab/S-Eval/issues">Issues</a> or contact us by <a href="mailto:xiaohanyuan@zju.edu.cn">Email</a>.
 <br>
 <br>
 📣 [2024/05/31]: We release 20,000 corresponding <a href="./s_eval/s-eval_attack_zh_v0.1.0.jsonl.zip">attack prompts</a>.
