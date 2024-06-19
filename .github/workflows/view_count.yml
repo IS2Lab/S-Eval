@@ -2,7 +2,7 @@ name: GitHub Traffic Count Update Everyday
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */24 * * *"
   workflow_dispatch:
 
 permissions:
@@ -67,7 +67,7 @@ jobs:
           latest = dict(before)
           for i in range(len(now['views'])):
               timestamp = now['views'][i]['timestamp']
-              if timestamp in timestamps:
+              if (timestamp in timestamps) and latest['views'][timestamps[timestamp]]['count'] > now['views'][i]['count']:
                   latest['views'][timestamps[timestamp]] = now['views'][i]
               else:
                   latest['views'].append(now['views'][i])
