@@ -66,7 +66,8 @@ jobs:
           for i in range(len(now['clones'])):
               timestamp = now['clones'][i]['timestamp']
               if timestamp in timestamps:
-                  latest['clones'][timestamps[timestamp]] = now['clones'][i]
+                  if latest['clones'][timestamps[timestamp]]['count'] < now['clones'][i]['count']:
+                      latest['clones'][timestamps[timestamp]] = now['clones'][i]
               else:
                   latest['clones'].append(now['clones'][i])
           
