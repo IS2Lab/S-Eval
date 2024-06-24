@@ -41,7 +41,7 @@ The statistics on the risk dimensions and number of test prompts in one language
   <tr align="center">
     <th>Risk Dimension</th>
     <th>Risk Category</th>
-    <th># Normal</th>
+    <th># Base</th>
     <th># Attack</th>
   </tr>
 </thead>
