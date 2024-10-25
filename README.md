@@ -3,11 +3,11 @@
   <h1>S-Eval: Automatic and Adaptive Test Generation for Benchmarking Safety Evaluation of Large Language Models</h1>
 
   <h3>
-  🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>
+  🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">Leaderboard</a>
   </h3>
 
   <h4>
-    <img src="https://img.shields.io/badge/Version-0.1.1-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-0.1.2-blue.svg" alt="Version">
     <a href="https://arxiv.org/abs/2405.14191"> <img src="https://img.shields.io/badge/ArXiv-Paper-red" alt="Paper"></a> 
     <a href='https://github.comIS2Lab/S-Eval'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=yellow&label=View&query=count&url=https://gist.github.com/IS2Lab/068d37fedfd45784473495841fe9bf68/raw/traffic.json&logo=github'></a>
     <a href='https://github.comIS2Lab/S-Eval'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.github.com/IS2Lab/a6ee584667b0599d2d1b324eac9f00dc/raw/clone.json&logo=github'></a>
@@ -17,13 +17,16 @@
 </div>
 
 <h2 id="S-Eval">🔔 Updates</h2>
+📣 [2024/10/25]: We release all 20,000 base risk prompts and 200,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.2</a>). We also update 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">LeaderBoard_v0.1.2</a> with new evaluation results including GPT-4 and other models. 🎉 S-Eval has achieved about <b>7,000</b> total views and about <b>2,000</b> total downloads across multiple platforms. 🎉
+<br>
+<br>
 📣 [2024/06/17]: We further release 10,000 base risk prompts and 100,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.1</a>). If you require automatic safety evaluations, please feel free to submit a request via <a href="https://github.com/IS2Lab/S-Eval/issues">Issues</a> or contact us by <a href="mailto:xiaohanyuan@zju.edu.cn">Email</a>.
 <br>
 <br>
 📣 [2024/05/31]: We release 20,000 corresponding <a href="./s_eval/s-eval_attack_zh_v0.1.0.jsonl.zip">attack prompts</a>.
 <br>
 <br>
-📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>. You can also download the benchmark from the <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">HuggingFace Dataset</a>.
+📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.1">Leaderboard_v0.1.1</a>. You can also download the benchmark from the <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">HuggingFace Dataset</a>.
 <br>
 <br>
 <b><i>To maintain this benchmark for satisfying evolving needs from addressing future evaluation challenges, we warmly welcome submissions of new risks and attacks to continuously augment our risk taxonomy and adversarial scenarios through this project!</i></b>
@@ -225,12 +228,12 @@ For each method, we calculate balanced accuracy as well as precision and recall 
 <tbody>
   <tr>
     <td>Rule Matching</td>
-    <td align="center">60.85 </td>
-    <td align="center">67.68/82.61</td>
-    <td align="center">96.77/24.93</td>
-    <td align="center">70.29 </td>
-    <td align="center">69.47/72.18</td>
-    <td align="center">77.74/62.84</td>
+    <td align="center">74.12 </td>
+    <td align="center">78.46/74.44</td>
+    <td align="center">87.08/61.15</td>
+    <td align="center">70.19 </td>
+    <td align="center">69.42/72.01</td>
+    <td align="center">77.54/62.84</td>
   </tr>
   <tr>
     <td>GPT-4-Turbo</td>
@@ -243,12 +246,12 @@ For each method, we calculate balanced accuracy as well as precision and recall 
   </tr>
   <tr>
     <td>LLaMA-Guard-2</td>
-    <td align="center">-</td>
-    <td align="center">-</td>
-    <td align="center">-</td>
+    <td align="center">76.23</td>
+    <td align="center">77.68/95.37</td>
+    <td align="center">98.38/57.07</td>
     <td align="center">69.32 </td>
     <td align="center">64.30/93.81</td>
-    <td align="center">97.50/41.43</td>
+    <td align="center">97.50/41.13</td>
   </tr>
   <tr>
     <td><b>Ours</b></td>
@@ -264,7 +267,7 @@ For each method, we calculate balanced accuracy as well as precision and recall 
 </div>
 
 <h2 id="S-Eval">🏆 Leaderboard</h2>
-You can get more detailed results from the <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>.
+You can get more detailed results from the <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">Leaderboard</a>.
 
 <h3 id="S-Eval">Base Risk Prompt Set</h3>
 
