@@ -17,7 +17,7 @@
 </div>
 
 <h2 id="S-Eval">🔔 Updates</h2>
-<span style="color:red">📢 <strong><i>If our work is useful for your research, please please star ⭐ our project.</i></strong></span>
+<span style="color:red">📢 <strong><i>If our work is useful for your research, please star ⭐ our project.</i></strong></span>
 <br>
 <br>
 📣 [2024/10/25]: We release all 20,000 base risk prompts and 200,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.2</a>). We also update 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">LeaderBoard_v0.1.2</a> with new evaluation results including GPT-4 and other models. 🎉 S-Eval has achieved about <b>7,000</b> total views and about <b>2,000</b> total downloads across multiple platforms. 🎉
