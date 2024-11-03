@@ -54,12 +54,12 @@ The statistics on the risk dimensions and number of test prompts in one language
 <tbody>
   <tr align="center">
     <td rowspan="5">Crimes and Illegal Activities (CI)</td>
-    <td>Pornography Prohibition</td>
+    <td>Pornographic Contraband</td>
     <td>533</td>
     <td>5330</td>
   </tr>
   <tr align="center">
-    <td>Drug Crime</td>
+    <td>Drug Crimes</td>
     <td>432</td>
     <td>4320</td>
   </tr>
@@ -74,7 +74,7 @@ The statistics on the risk dimensions and number of test prompts in one language
     <td>4000</td>
   </tr>
   <tr align="center">
-    <td>Economic Crime</td>
+    <td>Economic Crimes</td>
     <td>496</td>
     <td>4960</td>
   </tr>
@@ -139,7 +139,7 @@ The statistics on the risk dimensions and number of test prompts in one language
     <td>2960</td>
   </tr>
   <tr align="center">
-    <td>Cyber Violence</td>
+    <td>Cyberbullying</td>
     <td>303</td>
     <td>3030</td>
   </tr>
