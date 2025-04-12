@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/s-eval_logo.png" width="160" alt="S-Eval icon" style="border-radius: 5%;">
-  <h1>S-Eval: Automatic and Adaptive Test Generation for Benchmarking Safety Evaluation of Large Language Models</h1>
+  <h1>S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models</h1>
 
   <h3>
   🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">Leaderboard</a>
@@ -18,6 +18,9 @@
 
 <h2 id="S-Eval">🔔 Updates</h2>
 <span style="color:red">📢 <strong><i>If our work is useful for your research, please star ⭐ our project.</i></strong></span>
+<br>
+<br>
+📣 [2025/03/30]: 🎉 Our paper is accepted by ISSTA 2025. To meet the evaluation needs under different budgets, we partition the benchmark into four scales: <a href="./s_eval/small">Small</a> (1,000 Base and 10,000 Attack in each language), <a href="./s_eval/medium">Medium</a> (3,000 Base and 30,000 Attack in each language), <a href="./s_eval/large">Large</a> (5,000 Base and 50,000 Attack in each language) and <a href="./s_eval/full">Full</a> (10,000 Base and 100,000 Attack in each language), comprehensively considering the balance and harmfulness of data.
 <br>
 <br>
 📣 [2024/10/25]: We release all 20,000 base risk prompts and 200,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.2</a>). We also update 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">LeaderBoard_v0.1.2</a> with new evaluation results including GPT-4 and other models. 🎉 S-Eval has achieved about <b>7,000</b> total views and about <b>2,000</b> total downloads across multiple platforms. 🎉
@@ -209,7 +212,7 @@ Our risk taxonomy has a structured hierarchy with four levels, comprising 8 risk
 To validate the effectiveness of our risk evaluation model, we construct a test suite by collecting 1000 Chinese QA pairs and 1000 English QA pairs from Qwen-7B-Chat with manual annotation. 
 We also compare our risk evaluation model with three baseline methods: <b>Rule Matching</b>, <b>GPT-based</b> and <b>LLaMA-Guard-2</b>. 
 
-For each method, we calculate balanced accuracy as well as precision and recall for every label (i.e. <i>safe</i>/<i>unsafe</i>). The <b>bold</b> value indicates the best.
+For each method, we calculate balanced accuracy as well as precision and recall for <i>unsafe</i>. The <b>bold</b> value indicates the best. w/ CoT denotes using the CoT prompting in the evaluation.
 
 <div align="center">
 <table style="border-collapse: collapse;">
@@ -232,38 +235,47 @@ For each method, we calculate balanced accuracy as well as precision and recall 
   <tr>
     <td>Rule Matching</td>
     <td align="center">74.12 </td>
-    <td align="center">78.46/74.44</td>
-    <td align="center">87.08/61.15</td>
+    <td align="center">74.44</td>
+    <td align="center">61.15</td>
     <td align="center">70.19 </td>
-    <td align="center">69.42/72.01</td>
-    <td align="center">77.54/62.84</td>
+    <td align="center">72.01</td>
+    <td align="center">62.84</td>
   </tr>
   <tr>
     <td>GPT-4-Turbo</td>
     <td align="center">78.00 </td>
-    <td align="center">79.19/94.07</td>
-    <td align="center">97.74/58.27</td>
+    <td align="center">94.07</td>
+    <td align="center">58.27</td>
     <td align="center">72.36 </td>
-    <td align="center">66.84/93.83</td>
-    <td align="center">97.12/47.60</td>
+    <td align="center">93.83</td>
+    <td align="center">47.60</td>
   </tr>
   <tr>
     <td>LLaMA-Guard-2</td>
     <td align="center">76.23</td>
-    <td align="center">77.68/95.37</td>
-    <td align="center">98.38/57.07</td>
+    <td align="center">95.37</td>
+    <td align="center">57.07</td>
     <td align="center">69.32 </td>
-    <td align="center">64.30/93.81</td>
-    <td align="center">97.50/41.13</td>
+    <td align="center">93.81</td>
+    <td align="center">41.13</td>
   </tr>
   <tr>
     <td><b>Ours</b></td>
-    <td align="center"><b>92.23</b> </td>
-    <td align="center">93.36/92.37</td>
-    <td align="center">95.48/88.98</td>
+    <td align="center">92.23</td>
+    <td align="center">92.37</td>
+    <td align="center">88.98</td>
     <td align="center"><b>88.23</b> </td>
-    <td align="center">86.36/90.97</td>
-    <td align="center">92.32/84.13</td>
+    <td align="center">90.97</td>
+    <td align="center">84.13</td>
+  </tr>
+  <tr>
+    <td><b>w/ CoT</b></td>
+    <td align="center"><b>92.83</b> </td>
+    <td align="center">92.70</td>
+    <td align="center">90.03</td>
+    <td align="center">86.78</td>
+    <td align="center">92.89</td>
+    <td align="center">79.12</td>
   </tr>
 </tbody>
 </table>
@@ -305,8 +317,8 @@ You can get more detailed results from the <a href="https://huggingface.co/space
 If our work is useful for your own, please cite us with the following BibTex entry:
 ```bibtex
 @article{yuan2024seval,
-  title={S-Eval: Automatic and Adaptive Test Generation for Benchmarking Safety Evaluation of Large Language Models},
-  author={Xiaohan Yuan and Jinfeng Li and Dongxia Wang and Yuefeng Chen and Xiaofeng Mao and Longtao Huang and Hui Xue and Wenhai Wang and Kui Ren and Jingyi Wang},
+  title={S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models},
+  author={Xiaohan Yuan and Jinfeng Li and Dongxia Wang and Yuefeng Chen and Xiaofeng Mao and Longtao Huang and Jialuo Chen and Hui Xue and Xiaoxia Liu and Wenhai Wang and Kui Ren and Jingyi Wang},
   journal={arXiv preprint arXiv:2405.14191},
   year={2024}
 }
