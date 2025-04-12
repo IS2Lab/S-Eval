@@ -20,7 +20,7 @@
 <span style="color:red">📢 <strong><i>If our work is useful for your research, please star ⭐ our project.</i></strong></span>
 <br>
 <br>
-📣 [2025/03/30]: 🎉 Our paper is accepted by ISSTA 2025. To meet the evaluation needs under different budgets, we partition the benchmark into four scales: <a href="./s_eval/small">Small</a> (1,000 Base and 10,000 Attack in each language), <a href="./s_eval/medium">Medium</a> (3,000 Base and 30,000 Attack in each language), <a href="./s_eval/large">Large</a> (5,000 Base and 50,000 Attack in each language) and <a href="./s_eval/full">Full</a> (10,000 Base and 100,000 Attack in each language), comprehensively considering the balance and harmfulness of data.
+📣 [2025/03/30]: 🎉 Our paper has been accepted by ISSTA 2025. To meet evaluation needs under different budgets, we partition the benchmark into four scales: <a href="./s_eval/small">Small</a> (1,000 Base and 10,000 Attack in each language), <a href="./s_eval/medium">Medium</a> (3,000 Base and 30,000 Attack in each language), <a href="./s_eval/large">Large</a> (5,000 Base and 50,000 Attack in each language) and <a href="./s_eval/full">Full</a> (10,000 Base and 100,000 Attack in each language), comprehensively considering the balance and harmfulness of data.
 <br>
 <br>
 📣 [2024/10/25]: We release all 20,000 base risk prompts and 200,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.2</a>). We also update 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">LeaderBoard_v0.1.2</a> with new evaluation results including GPT-4 and other models. 🎉 S-Eval has achieved about <b>7,000</b> total views and about <b>2,000</b> total downloads across multiple platforms. 🎉
