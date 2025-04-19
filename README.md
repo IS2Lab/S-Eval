@@ -3,7 +3,7 @@
   <h1>S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models</h1>
 
   <h3>
-  🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">Leaderboard</a>
+  🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>
   </h3>
 
   <h4>
@@ -23,7 +23,7 @@
 📣 [2025/03/30]: 🎉 Our paper has been accepted by ISSTA 2025. To meet evaluation needs under different budgets, we partition the benchmark into four scales: <a href="./s_eval/small">Small</a> (1,000 Base and 10,000 Attack in each language), <a href="./s_eval/medium">Medium</a> (3,000 Base and 30,000 Attack in each language), <a href="./s_eval/large">Large</a> (5,000 Base and 50,000 Attack in each language) and <a href="./s_eval/full">Full</a> (10,000 Base and 100,000 Attack in each language), comprehensively considering the balance and harmfulness of data.
 <br>
 <br>
-📣 [2024/10/25]: We release all 20,000 base risk prompts and 200,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.2</a>). We also update 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">LeaderBoard_v0.1.2</a> with new evaluation results including GPT-4 and other models. 🎉 S-Eval has achieved about <b>7,000</b> total views and about <b>2,000</b> total downloads across multiple platforms. 🎉
+📣 [2024/10/25]: We release all 20,000 base risk prompts and 200,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.2</a>). We also update 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">LeaderBoard</a> with new evaluation results including GPT-4 and other models. 🎉 S-Eval has achieved about <b>7,000</b> total views and about <b>2,000</b> total downloads across multiple platforms. 🎉
 <br>
 <br>
 📣 [2024/06/17]: We further release 10,000 base risk prompts and 100,000 corresponding attack prompts (<a href="./s_eval/">Version-0.1.1</a>). If you require automatic safety evaluations, please feel free to submit a request via <a href="https://github.com/IS2Lab/S-Eval/issues">Issues</a> or contact us by <a href="mailto:xiaohanyuan@zju.edu.cn">Email</a>.
@@ -32,7 +32,7 @@
 📣 [2024/05/31]: We release 20,000 corresponding <a href="./s_eval/s-eval_attack_zh_v0.1.0.jsonl.zip">attack prompts</a>.
 <br>
 <br>
-📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.1">Leaderboard_v0.1.1</a>. You can also download the benchmark from the <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">HuggingFace Dataset</a>.
+📣 [2024/05/23]: We publish our <a href="https://arxiv.org/abs/2405.14191">paper</a> on ArXiv and first release 2,000 base risk prompts. The evaluation results in our experiments are shown in the HuggingFace 🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>. You can also download the benchmark from the <a href="https://huggingface.co/datasets/IS2Lab/S-Eval">HuggingFace Dataset</a>.
 <br>
 <br>
 <b><i>To maintain this benchmark for satisfying evolving needs from addressing future evaluation challenges, we warmly welcome submissions of new risks and attacks to continuously augment our risk taxonomy and adversarial scenarios through this project!</i></b>
@@ -282,7 +282,7 @@ For each method, we calculate balanced accuracy as well as precision and recall 
 </div>
 
 <h2 id="S-Eval">🏆 Leaderboard</h2>
-You can get more detailed results from the <a href="https://huggingface.co/spaces/IS2Lab/S-Eval_v0.1.2">Leaderboard</a>.
+You can get more detailed results from the <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>.
 
 <h3 id="S-Eval">Base Risk Prompt Set</h3>
 
