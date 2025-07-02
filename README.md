@@ -8,7 +8,7 @@
 
   <h4>
     <img src="https://img.shields.io/badge/Version-0.1.2-blue.svg" alt="Version">
-    <a href="https://arxiv.org/abs/2405.14191"> <img src="https://img.shields.io/badge/ArXiv-Paper-red" alt="Paper"></a> 
+    <a href="https://dl.acm.org/doi/abs/10.1145/3728971"> <img src="https://img.shields.io/badge/ACM-Paper-red" alt="Paper"></a> 
     <a href='https://github.comIS2Lab/S-Eval'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=yellow&label=View&query=count&url=https://gist.github.com/IS2Lab/068d37fedfd45784473495841fe9bf68/raw/traffic.json&logo=github'></a>
     <a href='https://github.comIS2Lab/S-Eval'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.github.com/IS2Lab/a6ee584667b0599d2d1b324eac9f00dc/raw/clone.json&logo=github'></a>
     <img src="https://img.shields.io/github/stars/IS2Lab/S-Eval" alt="Stars">
@@ -316,12 +316,18 @@ You can get more detailed results from the <a href="https://huggingface.co/space
 
 If our work is useful for your own, please cite us with the following BibTex entry:
 ```bibtex
-@article{yuan2024seval,
-  title={S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models},
-  author={Xiaohan Yuan and Jinfeng Li and Dongxia Wang and Yuefeng Chen and Xiaofeng Mao and Longtao Huang and Jialuo Chen and Hui Xue and Xiaoxia Liu and Wenhai Wang and Kui Ren and Jingyi Wang},
-  journal={arXiv preprint arXiv:2405.14191},
-  year={2024}
-}
+@article{yuan2025seval,
+        title={S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models},
+        author={Yuan, Xiaohan and Li, Jinfeng and Wang, Dongxia and Chen, Yuefeng and Mao, Xiaofeng and Huang, Longtao and Chen, Jialuo and Xue, Hui and Liu, Xiaoxia and Wang, Wenhai and Ren, Kui and Wang, Jingyi},
+        journal={Proceedings of the ACM on Software Engineering},
+        volume={2},
+        number={ISSTA},
+        pages={2136--2157},
+        year={2025},
+        publisher={ACM New York, NY, USA},
+        url = {https://doi.org/10.1145/3728971},
+        doi = {10.1145/3728971}
+      }
 ```
 
 <h2 id="S-Eval">⚠️ Disclaimer</h2>
