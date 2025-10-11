@@ -1,9 +1,10 @@
 <div align="center">
-  <img src="assets/s-eval_logo.png" width="160" alt="S-Eval icon" style="border-radius: 5%;">
-  <h1>S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models</h1>
+  <img src="assets/s-eval_logo.png" width="150" alt="S-Eval Logo" style="border-radius: 5%;">
+  <h1 style="margin: 0;">S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models</h1>
+</div>
 
   <h3>
-  🏆 <a href="https://huggingface.co/spaces/IS2Lab/S-Eval">Leaderboard</a>
+  🏆 <a href="https://s.alibaba.com/aigc-web#/">Leaderboard</a>
   </h3>
 
   <h4>
@@ -20,7 +21,7 @@
 <span style="color:red">📢 <strong><i>If our work is useful for your research, please star ⭐ our project.</i></strong></span>
 <br>
 <br>
-📣 [2025/10/09]: 🎉 We release <a href="https://github.com/Alibaba-AAIG/Octopus"><b>Octopus</b></a>, an automated LLM safety evaluator, to meet the community’s need for accurate and reproducible safety assessment tools. You can download the model from <a href="https://huggingface.co/Alibaba-AAIG/Octopus-14B">HuggingFace</a> or <a href="https://modelscope.cn/models/Alibaba-AAIG/Octopus-14B/summary">ModelScope</a>.
+📣 [2025/10/09]: We update the evaluation for the latest LLMs in 🏆 <a href="https://s.alibaba.com/aigc-web#/">LeaderBoard</a>, and further release <a href="https://github.com/Alibaba-AAIG/Octopus"><b>Octopus</b></a>, an automated LLM safety evaluator, to meet the community’s need for accurate and reproducible safety assessment tools. You can download the model from <a href="https://huggingface.co/Alibaba-AAIG/Octopus-14B">HuggingFace</a> or <a href="https://modelscope.cn/models/Alibaba-AAIG/Octopus-14B/summary">ModelScope</a>.
 <br>
 <br>
 📣 [2025/03/30]: 🎉 Our <a href="https://dl.acm.org/doi/abs/10.1145/3728971">paper</a> has been accepted by ISSTA 2025. To meet evaluation needs under different budgets, we partition the benchmark into four scales: <a href="./s_eval/small">Small</a> (1,000 Base and 10,000 Attack in each language), <a href="./s_eval/medium">Medium</a> (3,000 Base and 30,000 Attack in each language), <a href="./s_eval/large">Large</a> (5,000 Base and 50,000 Attack in each language) and <a href="./s_eval/full">Full</a> (10,000 Base and 100,000 Attack in each language), comprehensively considering the balance and harmfulness of data.
