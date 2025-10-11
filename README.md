@@ -1,7 +1,6 @@
 <div align="center">
   <img src="assets/s-eval_logo.png" width="150" alt="S-Eval Logo" style="border-radius: 5%;">
   <h1 style="margin: 0;">S-Eval: Towards Automated and Comprehensive Safety Evaluation for Large Language Models</h1>
-</div>
 
   <h3>
   🏆 <a href="https://s.alibaba.com/aigc-web#/">Leaderboard</a>
