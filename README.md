@@ -315,6 +315,10 @@ You can get more detailed results from the <a href="https://huggingface.co/space
 <img src="assets/attack_en.png" width="800" alt="attack_en">
 </div>
 
+<br>
+
+> 💡 If S-Eval reveals potential safety risks or vulnerabilities in your evaluated models, we recommend considering our open-sourced <a href="https://modelscope.cn/collections/Alibaba-AAIG/YuFeng-XGuard-Reason">**XGuard**</a> series, a lightweight guardrail model designed for inference-time safety enhancement. **XGuard** provides targeted risk mitigation while preserving model usability and can be seamlessly integrated into existing pipelines for post-evaluation safety reinforcement.
+
 <h2 id="S-Eval">📄 Citation</h2>
 
 If our work is useful for your own, please cite us with the following BibTex entry:
